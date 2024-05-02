@@ -6,7 +6,25 @@
 
 
 // Aquí tu código
+function perimetroTriangulo($a, $b, $c){
 
+    $total = $a + $b + $c;
+
+    $primera = $a + $b;
+    $segunda = $b + $c;
+    $tercera = $c + $a;
+
+
+    if ($primera >= $c && $segunda >= $a && $tercera >= $b) {
+        return $total;
+
+    } else{
+        return -1;
+        echo -1;
+    }
+
+
+}
 
 
 // TESTS

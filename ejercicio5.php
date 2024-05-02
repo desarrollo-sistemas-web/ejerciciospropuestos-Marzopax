@@ -9,7 +9,16 @@
 
 // Aquí tu código
 
+function slug($cadena){
 
+    $dab = str_replace("", "-", $cadena);
+
+    if ($cadena <> " " && strtolower($cadena)){
+        return "";
+    } else {
+        return $dab;
+    }
+}
 
 
 // TESTS

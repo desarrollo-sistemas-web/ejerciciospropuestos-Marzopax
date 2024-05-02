@@ -6,8 +6,11 @@
 
 // Aquí tu código
 
+function operacion(int $n1,int $n2,string $op){}
 
+$op = $n1 + $n2;
 
+echo $op;
 
 // TESTS
 assert(operacion(1, 1, '+') == 2);
