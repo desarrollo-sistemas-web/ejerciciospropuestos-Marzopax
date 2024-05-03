@@ -6,6 +6,8 @@
 // - max
 // - min
 
+function puntuacion(array $asd)
+
 
 // La función recibirá 2 arrays (uno a la vez) que se escriben a continuación, por lo que te ahorrarás esta parte. 😉
 

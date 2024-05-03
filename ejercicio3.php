@@ -6,13 +6,25 @@
 
 // Aquí tu código
 
-function operacion(int $n1,int $n2,string $op){}
+function operacion(int $n1,int $n2,string $op){
 
-$op = $n1 + $n2;
+if ($op == '+'){
+    return $n1 + $n2;
 
-echo $op;
+} elseif ($op == '-'){
+    return $n1 - $n2;
+
+} elseif ($op == '*'){
+    return $n1 * $n2;
+    
+} elseif ($op == '/'){
+    return $n1 / $n2;
+
+} else {return -1;} 
+}
 
 // TESTS
+
 assert(operacion(1, 1, '+') == 2);
 assert(operacion(2, 2, '-') == 0);
 assert(operacion(2, 3, '*') == 6);

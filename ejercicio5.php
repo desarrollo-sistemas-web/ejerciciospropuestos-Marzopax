@@ -9,17 +9,21 @@
 
 // Aquí tu código
 
-function slug($cadena){
+function slug(string $cadena){
 
-    $dab = str_replace("", "-", $cadena);
+    $reducir_cadena = strtolower($cadena);
 
-    if ($cadena <> " " && strtolower($cadena)){
-        return "";
+    if (empty($cadena) or $cadena == " ") {
+        return "error";
     } else {
+        $dab = str_replace(" ", "-", $reducir_cadena);
         return $dab;
     }
+
 }
 
+
+slug("Pato Loco");
 
 // TESTS
 assert(slug("Hola Mundo") == "hola-mundo");
