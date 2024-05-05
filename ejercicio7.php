@@ -7,6 +7,7 @@
 // - min
 
 
+
 // La función recibirá 2 arrays (uno a la vez) que se escriben a continuación, por lo que te ahorrarás esta parte. 😉
 
 $puntuaciones = [
@@ -38,12 +39,32 @@ $puntuaciones2 = [
 // Aquí tu código
 
 
+function puntuacion($datos){
+    
+    $contar = count($datos);
+    $suma = array_sum($datos);
+    $prome = $suma / $contar;
+
+    $maximo = max($datos);
+    $minimo = min($datos);
+
+    $usuario_grande = array_search($maximo, $datos);
+    $usuario_chico = array_search($minimo, $datos);
+
+    return [
+        "promedio" => $prome,
+        "max" => $maximo,
+        "min" => $minimo,
+        "max_users" => [$usuario_grande],
+        "min_users" => [$usuario_chico]
+    ];
+};
 
 
 // TESTS
 assert(puntuacion($puntuaciones) == [
     "promedio" => 5.5,
-    "max" => 9,
+    "max" => 10,
     "min" => 1,
     "max_users" => ["Raquel"],
     "min_users" => ["Jorge"]

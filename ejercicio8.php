@@ -7,7 +7,20 @@
 
 
 // Aquí tu código
+function palindromo($cadena){
 
+    $reducir_cadena = strtolower($cadena);
+    $sin_espacios = str_replace(" ", "", $reducir_cadena);
+    $sin_acentos = str_replace(array("Á", "á"), array("A", "a"), $sin_espacios);
+    $dar_vuelta = strrev($sin_acentos);
+
+    if ($sin_acentos == $dar_vuelta) {
+        return true;
+    } else {
+        return false;
+    }
+
+}
 
 
 // TESTS
